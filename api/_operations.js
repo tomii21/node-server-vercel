@@ -1,6 +1,6 @@
 const mysql = require("mysql")
 
-function Read(con, callback){
+export default function Read(con, callback){
     con.query("select * from nombres", function(err, result){
         if(err){
             console.log(err)
@@ -12,4 +12,3 @@ function Read(con, callback){
     })
 }
 
-module.exports = {Read};
