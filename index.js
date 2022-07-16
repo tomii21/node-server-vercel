@@ -25,11 +25,11 @@ app.use(cors())
 app.get("/",(req,res)=>{
 res.send("Hola")
 })
-app.post("/conectado", (req, res) => {
+/* app.post("/conectado", (req, res) => {
     console.log("Connected to React");
     res.redirect("/");
   });
-
+ */
 app.get("/read", (req,res)=>{
     Read(con, (result)=>{
         res.json(result); 
