@@ -35,4 +35,7 @@ app.get("/read", (req,res)=>{
         res.json(result); 
     })
 })
-app.listen(3001)
+
+const listener = app.listen(3001, function(){ 
+    console.log('Listening on port ' + listener.address().port)
+})
