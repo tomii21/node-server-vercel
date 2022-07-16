@@ -1,7 +1,7 @@
 const express = require("express")
 
 const app = express();
-const {Read} = require("./api/operation")
+const {Read} = require("./api/operations")
 const {con} = require("./lib/database")
 
 const cors = require("cors")
@@ -24,4 +24,4 @@ app.get("/read", (req,res)=>{
     })
 })
 
-app.listen(3001, function(){ console.log('Express listening on port', this.address().port); }); 
+app.listen(3000, function(){ console.log('Express listening on port', this.address().port); }); 
