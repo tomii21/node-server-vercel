@@ -1,8 +1,8 @@
 const express = require("express")
 
 const app = express();
-const {Read} = require("./operations")
-const {con} = require("../lib/database")
+const {Read} = require("./api/operations")
+const {con} = require("./lib/database")
 
 const cors = require("cors")
 
