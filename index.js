@@ -1,8 +1,8 @@
 const express = require("express")
-
+const mysql = require("mysql")
 const app = express();
-const {Read} = require("./api/operations")
-const {con} = require("./lib/database")
+const Read= require("./api/operations")
+const con = require("./lib/database")
 
 const cors = require("cors")
 
@@ -16,9 +16,11 @@ res.send("Hola")
 app.post("/conectado", (req, res) => {
     console.log("Connected to React");
     res.redirect("/");
+   
   });
 
 app.get("/read", (req,res)=>{
+
     Read(con, (result)=>{
         res.json(result);   
     })
