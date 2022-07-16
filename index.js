@@ -36,6 +36,4 @@ app.get("/read", (req,res)=>{
     })
 })
 
-const listener = app.listen(3001, function(){ 
-    console.log('Listening on port ' + listener.address().port)
-})
+app.listen(3001, function(){ console.log('Express listening on port', this.address().port); }); 
