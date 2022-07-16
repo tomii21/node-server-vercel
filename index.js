@@ -1,7 +1,7 @@
 const express = require("express")
 const mysql = require("mysql")
 const app = express();
-const {Read} = require("./operation")
+const {Read} = require("./api/_operations")
 
 const cors = require("cors")
 
