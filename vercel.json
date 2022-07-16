@@ -1,6 +1,6 @@
 {
     "version":2,
-    "name": "server-node",
+    "name": "node-server-vercel",
     "builds": [
         {"src":"index.js", "use": "@vercel/node"}
     ],
