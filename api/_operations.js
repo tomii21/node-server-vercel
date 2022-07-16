@@ -1,4 +1,4 @@
-const mysql = require("mysql")
+/* const mysql = require("mysql")
 
 export default function Read(con, callback){
     con.query("select * from nombres", function(err, result){
@@ -12,3 +12,4 @@ export default function Read(con, callback){
     })
 }
 
+ */

@@ -1,7 +1,7 @@
 const express = require("express")
 const mysql = require("mysql")
 const app = express();
-const {Read} = require("./api/_operations")
+/* const {Read} = require("./api/_operations") */
 
 const cors = require("cors")
 
@@ -25,15 +25,15 @@ app.use(cors())
 app.get("/",(req,res)=>{
 res.send("Hola")
 })
-app.post("/conectado", (req, res) => {
+/* app.post("/conectado", (req, res) => {
     console.log("Connected to React");
     res.redirect("/");
   });
-
-app.get("/read", (req,res)=>{
+ */
+/* app.get("/read", (req,res)=>{
     Read(con, (result)=>{
         res.json(result);   
     })
-})
+}) */
 
 app.listen(3001, function(){ console.log('Express listening on port', this.address().port); }); 
