@@ -2,13 +2,14 @@ const express = require("express")
 const mysql = require("mysql")
 const app = express();
 const Read= require("./api/operations")
+const Insert= require("./api/operations")
 const con = require("./lib/database")
-
+const dotenv = require("dotenv")
 const cors = require("cors")
-
+require('dotenv').config();
 app.use(express.json());
 app.use(cors())
-
+app.use(express.static('public'));
 
 app.get("/",(req,res)=>{
 res.send("Hola")
@@ -26,4 +27,11 @@ app.get("/read", (req,res)=>{
     })
 })
 
-app.listen(3000, function(){ console.log('Express listening on port', this.address().port); }); 
+app.get("/insert", (req,res)=>{
+
+    Insert(con, (result)=>{
+        res.json(result);   
+    })
+})
+
+app.listen(process.env.PORT ||3000); 
