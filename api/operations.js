@@ -1,6 +1,7 @@
 const mysql = require("mysql")
 
-module.exports = function Read(con, callback){
+ const Read =(con, callback) =>{
+    
     con.query("select * from prod", function(err, result){
         if(err){
             console.log(err)
@@ -9,12 +10,22 @@ module.exports = function Read(con, callback){
         callback(result);
         
         
-    })
+    }) 
 }
 
- 
+const Insert = (con, callback)=> {
+    con.query("insert into prod values('producto1')", function(err, result){
+        if(err){
+            console.log(err)
 
-module.exports = function Insert(con, callback){
+        }
+        callback(result);
+        
+        
+    })   }
+
+module.exports = {Read, Insert}
+/* module.exports = function Insert(con, callback){
     con.query("insert into prod values('producto1')", function(err, result){
         if(err){
             console.log(err)
@@ -25,5 +36,5 @@ module.exports = function Insert(con, callback){
         
     })
 }
-
+ */
  
